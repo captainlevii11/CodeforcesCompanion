@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>CF Companion</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <h1>CF Companion</h1>
+
+  <div id="handle-row">
+    <input id="handle-input" type="text" placeholder="Codeforces handle" />
+    <button id="analyze-btn">Analyze</button>
+  </div>
+
+  <div id="status-msg"></div>
+
+  <div id="results" class="hidden">
+    <h2>Weakest Tags</h2>
+    <p class="subtitle">Sorted by solve rate (distinct solved ÷ distinct attempted)</p>
+    <div id="tag-list"></div>
+  </div>
+
+  <hr />
+
+  <div id="tracking-section">
+    <h2>🔔 Verdict Notifier</h2>
+    <p class="subtitle">Get a desktop notification when your next submission is judged.</p>
+    <button id="tracking-toggle-btn">Start Tracking</button>
+    <div id="tracking-status"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

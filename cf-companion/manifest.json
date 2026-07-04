@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "CF Companion",
+  "version": "1.1.0",
+  "description": "Notes panel, weak-topic finder, similar-problem finder, auto-open-all-problems, live contest rank, and submission verdict notifier for Codeforces.",
+  "permissions": ["storage", "tabs", "alarms", "notifications"],
+  "host_permissions": ["https://codeforces.com/*"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "CF Companion",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://codeforces.com/problemset/problem/*",
+        "https://codeforces.com/contest/*/problem/*",
+        "https://codeforces.com/gym/*/problem/*"
+      ],
+      "js": ["content-notes.js", "content-similar.js"],
+      "css": ["content-notes.css", "content-similar.css"]
+    },
+    {
+      "matches": [
+        "https://codeforces.com/contest/*",
+        "https://codeforces.com/contests/*",
+        "https://codeforces.com/gym/*"
+      ],
+      "js": ["content-autoopen.js"],
+      "css": ["content-autoopen.css"]
+    },
+    {
+      "matches": [
+        "https://codeforces.com/contest/*/problem/*",
+        "https://codeforces.com/gym/*/problem/*"
+      ],
+      "js": ["content-rank.js"],
+      "css": ["content-rank.css"]
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+body {
+  width: 340px;
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #14181f;
+  color: #eaeaea;
+  margin: 0;
+  padding: 14px;
+}
+
+h1 {
+  font-size: 16px;
+  margin: 0 0 12px;
+  color: #63b3ed;
+}
+
+h2 {
+  font-size: 13px;
+  margin: 12px 0 2px;
+  color: #cbd5e0;
+}
+
+.subtitle {
+  font-size: 11px;
+  color: #888;
+  margin: 0 0 10px;
+}
+
+#handle-row {
+  display: flex;
+  gap: 6px;
+}
+
+#handle-input {
+  flex: 1;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #3a3a3a;
+  background: #1e2530;
+  color: #eaeaea;
+  font-size: 13px;
+}
+
+#analyze-btn {
+  background: #2b6cb0;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+#analyze-btn:hover {
+  background: #2c5282;
+}
+
+#analyze-btn:disabled {
+  background: #4a5568;
+  cursor: default;
+}
+
+#status-msg {
+  font-size: 12px;
+  margin-top: 8px;
+  color: #f6ad55;
+  min-height: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+.tag-row {
+  margin-bottom: 8px;
+}
+
+.tag-row-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.tag-name {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.tag-stats {
+  color: #a0aec0;
+}
+
+.bar-track {
+  background: #2a2f3a;
+  border-radius: 4px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f56565, #ed8936);
+  border-radius: 4px;
+}
+
+.tag-link {
+  font-size: 11px;
+  color: #63b3ed;
+  text-decoration: none;
+}
+
+.tag-link:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #2a2f3a;
+  margin: 14px 0;
+}
+
+#tracking-toggle-btn {
+  background: #6b46c1;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+#tracking-toggle-btn:hover {
+  background: #553c9a;
+}
+
+#tracking-toggle-btn.active {
+  background: #c53030;
+}
+
+#tracking-toggle-btn.active:hover {
+  background: #9b2c2c;
+}
+
+#tracking-status {
+  font-size: 11px;
+  color: #9ae6b4;
+  margin-top: 6px;
+}
